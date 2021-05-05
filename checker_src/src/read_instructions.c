@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/22 14:58:48 by user42            #+#    #+#             */
-/*   Updated: 2021/04/28 22:50:39 by user42           ###   ########.fr       */
+/*   Updated: 2021/05/04 14:11:49 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ int		read_intructions(t_list **intructions)
 	ret = get_next_line(STDIN_FILENO, &line);
 	while (ret != -1 && ret != 0)
 	{
+		if (ft_strlen(line) == 0)
+			break ;
 		if (is_valid_instruction(line) == false)
 		{
 			free(line);

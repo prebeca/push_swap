@@ -22,8 +22,8 @@ PS_INC		=		-I./push_swap_src/inc/
 
 all:				${PS_NAME}
 
-${PS_NAME}:			${PS_OBJS}
-					${CC} ${PS_INC} ${CFLAGS} ${PS_OBJS} ${LIBS} -o ${PS_NAME}
+${PS_NAME}:	${PS_OBJS} ${LIBFT_NAME}
+			${CC} ${PS_INC} ${CFLAGS} ${PS_OBJS} ${LIBS} -o ${PS_NAME}
 
 ${PS_O_DIR}/%.o :	${PS_C_DIR}/%.c
 					@mkdir -p ${PS_O_DIR}

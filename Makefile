@@ -17,6 +17,5 @@ clean:
 
 fclean:		clean
 			rm -f ${LIBFT_NAME} ${CHECKER_NAME} ${PS_NAME}
-			rm -rf ${O_DIR}
 
 re:			fclean all

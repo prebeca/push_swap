@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 14:26:53 by user42            #+#    #+#             */
-/*   Updated: 2021/04/29 19:08:11 by user42           ###   ########.fr       */
+/*   Updated: 2021/05/04 16:17:18 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ void			reverse_rotate(t_stack **stack, char *instruction);
 */
 void			choose_best_sorter(t_stack **stack_a);
 void			sorter(t_stack **stack_a);
+void			way_better_sorter(t_stack **stack_a);
 
 /*
 ** push_swap

@@ -1,17 +1,19 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    mean.rb                                            :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: user42 <user42@student.42.fr>              +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/04/28 23:04:46 by user42            #+#    #+#              #
-#    Updated: 2021/04/28 23:04:47 by user42           ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+#!/usr/bin/ruby
 
 if ARGV.length != 2
-	puts "mean.ruby: wrong number of arguments, requires 2 integers \n\t- usage: mean.ruby [number of tests] [number of values]"
+	puts "mean.rb: wrong number of arguments, requires 2 integers \n\t- usage: mean.ruby [number of tests] [number of values]"
+	exit 1
+end
+
+print "running make ...\n"
+`make`
+if	!$?.success?
+	print "mean.rb: make failed\n"
+	exit 1
+end
+
+if File.exist?("push_swap") == false
+	print "mean.rb: push_swap executable not found !\n"
 	exit 1
 end
 
@@ -24,7 +26,7 @@ max = -1;
 for i in 1..ARGV[0].to_i
 	print "running test #{i}/#{ARGV[0].to_i} ... #{working[i % working.length]}\r"
 	$stdout.flush
-	moves = `ARG=$(ruby random.rb -9999 9999 #{ARGV[1].to_i}) && ./push_swap $ARG | wc -l`.to_i
+	moves = `ARG=$(./random.rb -9999 9999 #{ARGV[1].to_i}) && ./push_swap $ARG | wc -l`.to_i
 	if (moves > max)
 		max = moves
 	end

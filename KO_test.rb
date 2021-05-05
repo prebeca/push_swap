@@ -1,17 +1,19 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    KO_test.rb                                         :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: user42 <user42@student.42.fr>              +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/04/28 23:04:41 by user42            #+#    #+#              #
-#    Updated: 2021/04/29 18:25:41 by user42           ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+#!/usr/bin/ruby
 
 if ARGV.length != 2
-	puts "KO_test.ruby: wrong number of arguments, requires 2 integers \n\t- usage: mean.ruby [number of tests] [number of values]"
+	puts "KO_test.rb: wrong number of arguments, requires 2 integers \n\t- usage: mean.ruby [number of tests] [number of values]"
+	exit 1
+end
+
+print "running make ...\n"
+`make`
+if	!$?.success?
+	print "KO_test.rb: make failed\n"
+	exit 1
+end
+
+if File.exist?("push_swap") == false || File.exist?("checker") == false
+	print "KO_test.rb: push_swap or checker executable not found !\n"
 	exit 1
 end
 

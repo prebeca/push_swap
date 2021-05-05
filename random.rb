@@ -1,14 +1,4 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    random.rb                                          :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: user42 <user42@student.42.fr>              +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/04/28 23:04:50 by user42            #+#    #+#              #
-#    Updated: 2021/04/28 23:04:51 by user42           ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+#!/usr/bin/ruby
 
 if ARGV.length != 3
 	puts "random.ruby: wrong number of arguments, requires 3 integers \n\t- usage: random.ruby [min value] [max value] [number of values]"
