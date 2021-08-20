@@ -1,7 +1,7 @@
 #!/usr/bin/ruby
 
 if ARGV.length != 2
-	puts "mean.rb: wrong number of arguments, requires 2 integers \n\t- usage: mean.ruby [number of tests] [number of values]"
+	puts "mean.rb: wrong number of arguments, requires 2 integers \n\t- usage: mean.rb [number of tests] [number of values]"
 	exit 1
 end
 
@@ -30,7 +30,7 @@ for i in 1..ARGV[0].to_i
 	if (moves > max)
 		max = moves
 	end
-	if (min == -1 || moves < min)
+	if (moves < min || min == -1)
 		min = moves
 	end
 	mean += moves;
