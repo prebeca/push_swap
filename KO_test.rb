@@ -1,7 +1,7 @@
 #!/usr/bin/ruby
 
 if ARGV.length != 2
-	puts "KO_test.rb: wrong number of arguments, requires 2 integers \n\t- usage: mean.ruby [number of tests] [number of values]"
+	puts "KO_test.rb: wrong number of arguments, requires 2 integers \n\t- usage: KO_test.ruby [number of tests] [number of values]"
 	exit 1
 end
 
